@@ -449,12 +449,14 @@ class db_contral{
 			{
 				$str_b=$str_b.'s';
 			}
+			if($str_b!=''){//带参数时候绑定参数
 			$bind_arr[0]=&$str_b;
 			foreach($val_arr as $k=>$val)
 			{
 				$bind_arr[$k+1]=&$val_arr[$k];
 			}
-			call_user_func_array(array($this->stmt,'bind_param'), $bind_arr);
+						call_user_func_array(array($this->stmt,'bind_param'), $bind_arr);
+			}
 			return $this->get_all_fetch();	//返回关联数组
 	}
 	function __destruct(){
