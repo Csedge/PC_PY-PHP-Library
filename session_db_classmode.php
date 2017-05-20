@@ -52,7 +52,7 @@ class SessionToDb extends db_contral{
 			{
 				$item_arr=array("session_life");
 				$data_arr=array(time());
-				$this->updata_data_basic($tab, $item_arr, $data_arr, "session_id","=",$session_id);
+				$this->update_data_basic($tab, $item_arr, $data_arr, "session_id","=",$session_id);
 				return $res[0]['session_data'];
 			}
 			else
@@ -68,7 +68,7 @@ class SessionToDb extends db_contral{
 				$s_arr_item[1]="session_life";
 				$s_arr_data[0]=$session_data;
 				$s_arr_data[1]=time();
-				$this->updata_data_basic("session",$s_arr_item,$s_arr_data,"session_id","=",$session_id);
+				$this->update_data_basic("session",$s_arr_item,$s_arr_data,"session_id","=",$session_id);
 			}
 			else
 			{
