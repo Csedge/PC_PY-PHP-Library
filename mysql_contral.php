@@ -293,7 +293,7 @@ class db_contral{
 	   }
 	   $this->con->query($db_sql);
 	}
-	function updata_data_normal($tab,$item_arr,$data_arr,$o_item_arr,$typ_arr,$o_val_arr,$rel_arr)
+	function update_data_normal($tab,$item_arr,$data_arr,$o_item_arr,$typ_arr,$o_val_arr,$rel_arr)
 	{
 		if(count($item_arr)==count($data_arr))
 		{
